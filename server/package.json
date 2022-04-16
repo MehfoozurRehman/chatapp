@@ -13,7 +13,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "cors": "^2.8.5",
-    "experss": "^0.0.1-security",
+    "express": "^4.17.3",
     "mongoose": "^6.3.0"
   },
   "devDependencies": {
