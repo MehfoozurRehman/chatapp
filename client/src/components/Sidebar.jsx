@@ -8,6 +8,7 @@ import {
   MessageSquare,
   Search,
 } from "react-feather";
+import { getText } from "../utils/getText";
 
 export default function Sidebar() {
   return (
@@ -119,13 +120,6 @@ function SidebarList({}) {
 }
 
 function SidebarListEntry({}) {
-  function getText(text) {
-    if (text.length > 30) {
-      return text.substring(0, 30) + "...";
-    } else {
-      return text;
-    }
-  }
   return (
     <div className="container__sidebar__list__entry">
       <input
@@ -152,7 +146,8 @@ function SidebarListEntry({}) {
             <div className="container__sidebar__list__entry__content__bottom__heading">
               <Check size={12} color="currentColor" />
               {getText(
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet quam dicta, officia perferendis magni delectus distinctio possimus corrupti maiores architecto."
+                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet quam dicta, officia perferendis magni delectus distinctio possimus corrupti maiores architecto.",
+                30
               )}
             </div>
             <button
