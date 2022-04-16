@@ -30,9 +30,177 @@ body {
 .container__sidebar {
   flex: 1;
   max-width: 25%;
+  min-width: 280px;
   background-color: #1e1e1e;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.container__sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7em 1em;
+  background-color: #343434;
+}
+.container__sidebar__header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  padding: 0em;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+.container__sidebar__header__avatar__img {
+  width: 100%;
+  height: 100%;
+}
+.container__sidebar__header__actions {
+  display: flex;
+  align-items: center;
+}
+.container__sidebar__header__actions__entry {
+  padding: 0em;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.container__sidebar__search {
+  padding: 1em 0.5em;
+}
+.container__sidebar__search__form {
+  background-color: #343434;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+}
+.container__sidebar__search__form__btn {
+  height: 100%;
+  width: 50px;
+  background-color: #242424;
+  border: none;
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.container__sidebar__search__form__input {
+  background-color: transparent;
+  color: white;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0em 1em;
+  font-size: 14px;
+}
+.container__sidebar__list {
+  overflow-y: auto;
+  height: calc(100% - 140px);
+  overflow-x: hidden;
+}
+.container__sidebar__list::-webkit-scrollbar {
+  width: 5px;
+}
+.container__sidebar__list::-webkit-scrollbar-thumb {
+  background-color: #f3f3f3;
+}
+.container__sidebar__list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.container__sidebar__list__entry {
+  position: relative;
+}
+.container__sidebar__list__entry__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.container__sidebar__list__entry__wrapper {
+  display: flex;
+  background-color: #272727;
+  width: 100%;
+  align-items: center;
+  padding: 1em 1em;
+}
+.container__sidebar__list__entry__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.container__sidebar__list__entry__content__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.container__sidebar__list__entry__content__top__heading {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+.container__sidebar__list__entry__content__top__sub__heading {
+  font-size: 11px;
+  color: #e6e5e5;
+  font-weight: bold;
+}
+.container__sidebar__list__entry__content__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5em;
+}
+.container__sidebar__list__entry__content__bottom__heading {
+  font-size: 11px;
+  color: #e6e5e5;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.container__sidebar__list__entry__content__bottom__heading svg {
+  margin-right: 0.5em;
+}
+.container__sidebar__list__entry__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-right: 1em;
+}
+.container__sidebar__list__entry__content__bottom__btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0em;
+  height: 12px;
+  display: none;
+  z-index: 2;
+  cursor: pointer;
+}
+.container__sidebar__list__entry__input:hover
+  ~ .container__sidebar__list__entry__wrapper {
+  transition: 300ms ease-in-out;
+  background-color: #3b3b3b;
+}
+.container__sidebar__list__entry__input:checked
+  ~ .container__sidebar__list__entry__wrapper {
+  transition: 300ms ease-in-out;
+  background-color: #343434;
+}
+.container__sidebar__list__entry__input:hover
+  ~ .container__sidebar__list__entry__wrapper
+  .container__sidebar__list__entry__content__bottom__btn {
+  display: flex;
+}
+.container__sidebar__list__entry__content__bottom__btn:hover {
+  display: flex;
 }
 .container__chat__wrapper {
   flex: 1;
